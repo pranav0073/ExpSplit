@@ -5,7 +5,7 @@ Rails.application.configure do
   config.cache_classes = true
 
 
-  config.action_mailer.default_url_options = { host: 'damp-plains-9470.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'damp-plains-9470.herokuapp.com' }
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
