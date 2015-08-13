@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DeviseTutorials</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+<%= link_to('Logout', destroy_user_session_path, :method => :delete) if current_user%>
+<%= link_to('Sign up', new_user_registration_path) unless current_user%>
+<%= link_to('Sign in', new_user_session_path) unless current_user%>
+
+	<!-- else
+		link_to("Sign Up", ) + " "
+ 		link_to "Sign in", 
+ 	end %> -->
+<%= yield %>
+
+</body>
+</html>
