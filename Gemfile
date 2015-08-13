@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> deployed figaro gem for ENV variables
 source 'https://rubygems.org'
 
 gem 'devise'
@@ -6,7 +9,11 @@ gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
+<<<<<<< HEAD
 
+=======
+gem 'sqlite3'
+>>>>>>> deployed figaro gem for ENV variables
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,6 +32,10 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+<<<<<<< HEAD
+=======
+gem 'figaro', "~> 0.7.0"
+>>>>>>> deployed figaro gem for ENV variables
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -35,7 +46,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+<<<<<<< HEAD
 	gem 'sqlite3'
+=======
+>>>>>>> deployed figaro gem for ENV variables
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -46,6 +60,7 @@ group :development, :test do
   gem 'spring'
 end
 
+<<<<<<< HEAD
 group :production do
   gem  'pg', '0.17.1'
   gem  'rails_12factor', '0.0.2'
@@ -53,3 +68,5 @@ end
 
 =======
 gem 'figaro', "~> 0.7.0"
+=======
+>>>>>>> deployed figaro gem for ENV variables
