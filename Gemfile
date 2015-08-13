@@ -61,6 +61,7 @@ group :development, :test do
 end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 group :production do
   gem  'pg', '0.17.1'
   gem  'rails_12factor', '0.0.2'
@@ -70,3 +71,10 @@ end
 gem 'figaro', "~> 0.7.0"
 =======
 >>>>>>> deployed figaro gem for ENV variables
+=======
+
+group :prodution, :test do
+end
+
+
+>>>>>>> modified the gem file
