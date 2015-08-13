@@ -1,3 +1,4 @@
+
 source 'https://rubygems.org'
 
 gem 'devise'
@@ -50,3 +51,5 @@ group :production do
   gem  'rails_12factor', '0.0.2'
 end
 
+=======
+gem 'figaro', "~> 0.7.0"
