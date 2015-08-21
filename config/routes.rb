@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :homes
+  resources :groups
   #get 'greeting/home'
 
   devise_for :users

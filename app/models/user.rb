@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   has_many:expenses
   belongs_to:home
+  groupify :group_member
+  groupify :named_group_member
 end

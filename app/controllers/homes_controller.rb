@@ -5,6 +5,8 @@ class HomesController < ApplicationController
   # GET /homes.json
   def index
     @homes = Home.all
+    @groups = Group.all
+
   end
 
   # GET /homes/1
@@ -15,6 +17,7 @@ class HomesController < ApplicationController
   # GET /homes/new
   def new
     @home = Home.new
+    @group = Group.new
   end
 
   # GET /homes/1/edit

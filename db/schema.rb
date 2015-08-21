@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150814095033) do
+ActiveRecord::Schema.define(version: 20150821100619) do
 
   create_table "expenses", force: :cascade do |t|
     t.text     "description"
@@ -21,9 +21,33 @@ ActiveRecord::Schema.define(version: 20150814095033) do
     t.integer  "user_id"
   end
 
+  create_table "group_memberships", force: :cascade do |t|
+    t.string  "member_type"
+    t.integer "member_id"
+    t.integer "group_id"
+    t.string  "group_name"
+    t.string  "membership_type"
+  end
+
+  add_index "group_memberships", ["group_id"], name: "index_group_memberships_on_group_id"
+  add_index "group_memberships", ["group_name"], name: "index_group_memberships_on_group_name"
+  add_index "group_memberships", ["member_id", "member_type"], name: "index_group_memberships_on_member_id_and_member_type"
+
+  create_table "groups", force: :cascade do |t|
+    t.string "type"
+    t.string "name"
+  end
+
   create_table "homes", force: :cascade do |t|
     t.string   "name"
     t.text     "address"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instances", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "home_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
