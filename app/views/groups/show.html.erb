@@ -6,10 +6,16 @@
 </p>
 <p>
   <strong>Members:</strong>
-  <%= @emails.each do |member|
- 	  member
- end
-   %>
+  <% @result.each do |member| %>
+ 	 <li><b><%= member[:email]%></b>
+ 	 	<% member[:expenses].each do |expense|%>
+ 	 		<li><%= expense[:description] %>
+ 	 			<%=expense[:value]%>
+ 	 		</li>
+ 		<%end%>
+ 	 </li>
+
+ <%end%>
 </p>
 
 

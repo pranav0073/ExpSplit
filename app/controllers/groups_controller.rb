@@ -4,16 +4,16 @@ class GroupsController < ApplicationController
   # GET /groups
   # GET /groups.json
   def index
-    @groups = Group.all
+    @groups = current_user.groups
   end
 
   # GET /groups/1
   # GET /groups/1.json
   def show
-    @members = @group.users
-    @emails = Array.new()
-    @members.each  do |member|
-      @emails << member[:email]
+    @result = []
+    members = @group.users
+    members.each do |member|
+      @result << {:email => member.email, :expenses => member.expenses}
     end
   end
 
