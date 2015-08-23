@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :set_group, only: [:show, :edit, :update, :destroy]
-
+  before_action :verify_group_user_relation, only: [:show]
   # GET /groups
   # GET /groups.json
   def index
@@ -68,6 +68,13 @@ class GroupsController < ApplicationController
   end
 
   private
+
+    def verify_group_user_relation
+     # @groups = current_user.groups
+      redirect_to groups_path unless current_user.groups.pluck(:id).include?(params[:id].to_i)
+   
+
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_group
       @group = Group.find(params[:id])
