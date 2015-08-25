@@ -19,6 +19,10 @@
     <%= f.label :value %><br>
     <%= f.text_field :value %>
   </div>
+  <div class="field">
+    <%= f.label :group %><br>
+    <%= f.select(:group_id, options_for_select(@groups)) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

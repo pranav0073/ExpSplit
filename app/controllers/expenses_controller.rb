@@ -18,6 +18,7 @@ class ExpensesController < ApplicationController
   # GET /expenses/new
   def new
     @expense = current_user.expenses.build
+    @groups = current_user.groups.pluck(:name, :group_id)
   end
 
   # GET /expenses/1/edit
@@ -72,6 +73,6 @@ class ExpensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def expense_params
-      params.require(:expense).permit(:description, :value)
+      params.require(:expense).permit(:description, :value, :group_id)
     end
 end

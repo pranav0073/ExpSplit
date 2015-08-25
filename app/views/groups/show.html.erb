@@ -9,9 +9,11 @@
   <% @result.each do |member| %>
  	 <li><b><%= member[:email]%></b>
  	 	<% member[:expenses].each do |expense|%>
- 	 		<li><%= expense[:description] %>
- 	 			<%=expense[:value]%>
- 	 		</li>
+ 	 		<%if expense[:group_id] == @group[:id]%> 
+ 	 			<li><%= expense[:description] %>
+ 	 				<%=expense[:value]%> 
+ 	 			</li>
+ 	 		<%end%>
  		<%end%>
  	 </li>
 
